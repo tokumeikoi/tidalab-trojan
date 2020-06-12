@@ -40,3 +40,4 @@ service.log
 ## 动态
 
 telegram@[tidalab](https://t.me/tidalab)
+关注channel获得更多讯息
