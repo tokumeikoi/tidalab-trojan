@@ -13,6 +13,7 @@ fi
 
 domain=$1
 
+cd /tmp
 wget https://github.com/go-acme/lego/releases/download/v3.7.0/lego_v3.7.0_linux_amd64.tar.gz
 
 tar zxvf lego_v3.7.0_linux_amd64.tar.gz
