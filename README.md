@@ -36,3 +36,7 @@ service.log
 [INFO]  2020/06/12 07:36:56 transport server is listening on tcp: [::]:443
 [INFO]  2020/06/12 07:36:56 server-side api service is listening on 127.0.0.1:10000
 ```
+
+## 动态
+
+telegram@[tidalab](https://t.me/tidalab)
