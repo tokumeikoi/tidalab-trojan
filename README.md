@@ -1,4 +1,4 @@
-<img src='https://github.com/tokumeikoi/tidalab-trojan/raw/master/img/tidalab.png' width='200px' align='center'>
+<img src='https://github.com/tokumeikoi/tidalab-trojan/raw/master/img/tidalab.png' width='100px' align='center'>
 
 ## 快速使用
 
