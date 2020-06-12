@@ -25,7 +25,7 @@ if ls ./.lego/certificates | grep "$domain"
     echo '证书签发成功'
     mkdir /root/.cert
     cp ./.lego/certificates/$domain.crt /root/.cert
-    cp ./.lego/certificates/$domain.key /root/.key
+    cp ./.lego/certificates/$domain.key /root/.cert
 else
     echo '证书签发失败'
 fi
