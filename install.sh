@@ -2,11 +2,11 @@
 echo '正在安装依赖'
 if cat /etc/os-release | grep "centos" > /dev/null
     then
-    yum update
+    yum update > /dev/null
     yum install unzip wget curl -y > /dev/null
     yum update curl -y
 else
-    apt update
+    apt update > /dev/null
     apt-get install unzip wget curl -y > /dev/null
     apt-get update curl -y
 fi
