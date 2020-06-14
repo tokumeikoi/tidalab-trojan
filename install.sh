@@ -6,9 +6,8 @@ if cat /etc/os-release | grep "centos" > /dev/null
     yum install unzip wget curl -y > /dev/null
     yum update curl -y
 else
-    apt update > /dev/null
+    apt-get update > /dev/null
     apt-get install unzip wget curl -y > /dev/null
-    apt-get update curl -y
 fi
 
 api=$1
@@ -32,8 +31,9 @@ rm -rf $folder
 #create dir, init files
 mkdir $folder
 cd $folder
+trojanVer=$(curl --silent "https://api.github.com/repos/p4gefau1t/trojan-go/releases" | grep "tag_name" | head -n 1 | awk -F ":" '{print $2}' | sed 's/\"//g;s/,//g;s/ //g')
 wget https://github.com/tokumeikoi/tidalab-trojan/releases/latest/download/tidalab-trojan
-wget https://github.com/p4gefau1t/trojan-go/releases/download/v0.7.0/trojan-go-linux-amd64.zip
+wget https://github.com/p4gefau1t/trojan-go/releases/download/${trojanVer}/trojan-go-linux-amd64.zip
 curl "${api}/api/v1/server/TrojanTidalab/config?token=${key}&node_id=${nodeId}&local_port=${localPort}" > ./config.json
 
 if cat config.json | grep "run_type" > /dev/null
