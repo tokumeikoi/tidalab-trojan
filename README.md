@@ -7,6 +7,7 @@
 
 ```
 # 请将命令中的domain.com替换成节点域名
+
 curl -fsSL https://github.com/tokumeikoi/tidalab-trojan/raw/master/sign.sh | bash -s domain.com
 ```
 
@@ -18,6 +19,7 @@ curl -fsSL https://github.com/tokumeikoi/tidalab-trojan/raw/master/sign.sh | bas
 # 请将命令中的NODEID替换成V2Board后台Trojan中添加的节点ID
 # 请将命令中的LOCALPORT替换成1-65535任意端口不允许与其他端口冲突，非连接端口和服务端口
 # 请将命令中的LICENSE替换成授权字符
+
 curl -fsSL https://github.com/tokumeikoi/tidalab-trojan/raw/master/install.sh | bash -s API TOKEN NODEID LOCALPORT LICENSE 60
 ```
 
