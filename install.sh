@@ -44,7 +44,7 @@ else
     exit
 fi
 
-unzip trojan-go-linux-amd64.zip
+unzip trojan-go-linux-amd64.zip -d ./
 chmod 755 *
 
 if ls /root/.cert | grep "key" > /dev/null
