@@ -33,7 +33,7 @@ rm -rf $folder
 mkdir $folder
 cd $folder
 wget https://github.com/tokumeikoi/tidalab-trojan/releases/latest/download/tidalab-trojan
-wget https://github.com/p4gefau1t/trojan-go/releases/download/v0.7.5/trojan-go-linux-amd64.zip
+wget https://github.com/p4gefau1t/trojan-go/releases/download/v0.7.8/trojan-go-linux-amd64.zip
 curl "${api}/api/v1/server/TrojanTidalab/config?token=${key}&node_id=${nodeId}&local_port=${localPort}" > ./config.json
 
 if cat config.json | grep "run_type" > /dev/null
