@@ -43,6 +43,21 @@ service.log
 [INFO]  2020/06/12 07:36:56 server-side api service is listening on 127.0.0.1:10000
 ```
 
+## Docker 部署
+
+```
+docker run -d --name=trojan \
+-v /root/.cert:/root/.cert \
+-e API=V2Board面板地址 \
+-e TOKEN=通讯密钥 \
+-e NODE=节点ID \
+-e LICENSE=授权码 \
+-e SYNCINTERVAL=60 \
+--restart=always \
+--network=host \
+tokumeikoi/tidalab-trojan
+```
+
 ## 动态
 
 telegram@[tidalab](https://t.me/tidalab)
