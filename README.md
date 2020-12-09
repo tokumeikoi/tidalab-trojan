@@ -1,5 +1,9 @@
 <img src='https://github.com/tokumeikoi/tidalab-trojan/raw/master/img/tidalab.png' width='100px' align='center'>
 
+## 建议
+
+我们建议您使用Debian(>=8)进行部署，当然你也可以选择CentOS(>=7)。
+
 ## 快速使用
 
 1.首先将节点域名解析到节点服务器，并且可以ping通  
@@ -17,10 +21,9 @@ curl -fsSL https://github.com/tokumeikoi/tidalab-trojan/raw/master/sign.sh | bas
 # 请将命令中的API替换成V2board面板地址如：https://v2board.com
 # 请将命令中的TOKEN替换成V2Board后台系统配置->服务端->通讯密钥
 # 请将命令中的NODEID替换成V2Board后台Trojan中添加的节点ID
-# 请将命令中的LOCALPORT替换成1-65535任意端口不允许与其他端口冲突，非连接端口和服务端口
 # 请将命令中的LICENSE替换成授权字符
 
-curl -fsSL https://github.com/tokumeikoi/tidalab-trojan/raw/master/install.sh | bash -s API TOKEN NODEID LOCALPORT LICENSE 60
+curl -fsSL https://github.com/tokumeikoi/tidalab-trojan/raw/master/install.sh | bash -s API TOKEN NODEID LICENSE 60
 ```
 
 4.当看到如下信息即为部署完成

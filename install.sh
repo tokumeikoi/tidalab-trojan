@@ -12,7 +12,6 @@ fi
 api=$1
 key=$2
 nodeId=$3
-localPort=$4
 license=$5
 folder=$key-trojan
 if [[ "$6" -ne "" ]]
@@ -32,16 +31,6 @@ mkdir $folder
 cd $folder
 wget https://github.com/tokumeikoi/tidalab-trojan/releases/latest/download/tidalab-trojan
 wget https://github.com/p4gefau1t/trojan-go/releases/download/v0.8.1/trojan-go-linux-amd64.zip
-curl "${api}/api/v1/server/TrojanTidalab/config?token=${key}&node_id=${nodeId}&local_port=${localPort}" > ./config.json
-
-if cat config.json | grep "run_type" > /dev/null
-    then
-    echo '配置获取成功'
-else
-    echo '配置获取失败'
-    exit
-fi
-
 unzip trojan-go-linux-amd64.zip
 chmod 755 *
 
@@ -54,7 +43,7 @@ else
 fi
 
 #run server
-nohup `pwd`/tidalab-trojan -api=$api -token=$key -node=$nodeId -localport=$localPort -license=$license -syncInterval=$syncInterval > tidalab.log 2>&1 &
+nohup `pwd`/tidalab-trojan -api=$api -token=$key -node=$nodeId -license=$license -syncInterval=$syncInterval > tidalab.log 2>&1 &
 echo '部署完成'
 sleep 3
 cat tidalab.log
