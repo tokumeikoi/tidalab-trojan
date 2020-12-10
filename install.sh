@@ -14,9 +14,9 @@ key=$2
 nodeId=$3
 license=$4
 folder=$key-trojan
-if [[ "$6" -ne "" ]]
+if [[ "$5" -ne "" ]]
     then
-    syncInterval=$6
+    syncInterval=$5
 else
     syncInterval=60
 fi
