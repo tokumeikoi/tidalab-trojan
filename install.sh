@@ -7,13 +7,7 @@ if cat /etc/os-release | grep "centos" > /dev/null
 else
     apt-get install unzip wget curl -y > /dev/null
     apt-get update curl -y
-fi
-
-echo '环境优化'
-ulimit -n 51200
-echo "soft nofile 51200" >> /etc/security/limits.conf
-echo "hard nofile 51200" >> /etc/security/limits.conf
-(cat <<EOF
+    (cat <<EOF
 fs.file-max = 102400
 net.core.somaxconn = 1048576
 net.ipv4.tcp_syncookies = 1
@@ -30,7 +24,8 @@ net.ipv4.ip_local_port_range = 32768 65535
 net.ipv4.tcp_mem = 88560 118080 177120
 net.ipv4.tcp_wmem = 4096 16384 8388608
 EOF
-) > /etc/sysctl.conf
+    ) > /etc/sysctl.conf
+fi
 
 api=$1
 key=$2
